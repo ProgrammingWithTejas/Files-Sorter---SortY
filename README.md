@@ -5,4 +5,4 @@ A Python Program That Basically Sorts everything. Image Extensions like .png. .j
 1. Copy "main.py" file to any folder that you want to sort the files of,
 2. Then Double-Click "main.py",
 3. Press "Enter" To Exit,
-3. And Your Files Will Be Sorted as simple as that.
+4. And Your Files Will Be Sorted as simple as that.

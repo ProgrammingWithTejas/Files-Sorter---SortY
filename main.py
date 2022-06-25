@@ -56,3 +56,5 @@ print(f"{len(Others)} Other Files Were Sorted Successfully!")
 
 totalFiles = len(Images) + len(Videos) + len(Audio) + len(Docs) + len(Apps) + len(Others)
 print(f"\nTotal {totalFiles} Files were sorted successfully!")
+
+exitInp = input('\nPress "Enter" To Exit: ')

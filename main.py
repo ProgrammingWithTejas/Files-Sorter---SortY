@@ -24,16 +24,15 @@ AudioExts = [".mp3", ".wav", ".m4a", ".aac"]
 AppExts = [".exe", ".msi"]
 DocExts = [".pdf", ".xlsx", ".docx", ".html", ".htm", ".xls", ".ppt", ".pptx", ".txt"]
 
-extSplit = os.path.splitext(file)[1].lower()
-
-Images = [file for file in files if extSplit in ImgExts]
-Videos = [file for file in files if extSplit in VidExts]
-Audio = [file for file in files if extSplit in AudioExts]
-Docs = [file for file in files if extSplit in DocExts]
-Apps = [file for file in files if extSplit in AppExts]
+Images = [file for file in files if os.path.splitext(file)[1].lower() in ImgExts]
+Videos = [file for file in files if os.path.splitext(file)[1].lower() in VidExts]
+Audio = [file for file in files if os.path.splitext(file)[1].lower() in AudioExts]
+Docs = [file for file in files if os.path.splitext(file)[1].lower() in DocExts]
+Apps = [file for file in files if os.path.splitext(file)[1].lower() in AppExts]
 Others = []
 
 for file in files:
+    extSplit = os.path.splitext(file)[1].lower()
     if (extSplit not in ImgExts) and (extSplit not in VidExts) and (extSplit not in AudioExts) and (extSplit not in DocExts) and (extSplit not in AppExts) and os.path.isfile(file):
         Others.append(file)
 
